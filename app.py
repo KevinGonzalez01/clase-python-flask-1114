@@ -14,9 +14,41 @@ def inicio():
     # `render_template` busca archivos dentro de la carpeta `templates`.
     return render_template("index.html")
 
+@app.route("/dos")
+def dos():
+    titulo = "Panel de inicio"
+    usuario = "Ana"
+    mensaje = "Bienvenida a Flask"
+ 
+    return render_template("dos.html",
+    titulo=titulo,
+    usuario=usuario,
+    mensaje=mensaje
+    )
 
-# Este bloque se ejecuta solo si corremos `python app.py` desde la terminal.
+
+
+@app.route("/tres")
+def tres():
+ 
+    return render_template("tres.html")
+
+
+@app.route("/cuatro")
+def cuatro():
+ 
+    return render_template("cuatro.html")
+
+
+
+@app.route("/cinco")
+def cinco():
+ 
+    return render_template("cinco.html")
+
+
+
 if __name__ == "__main__":
-    # `debug=True` sirve en desarrollo porque reinicia el servidor
-    # cuando detecta cambios y muestra errores con mas detalle.
+
+
     app.run(debug=True)
