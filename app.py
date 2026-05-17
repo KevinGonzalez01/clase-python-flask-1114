@@ -14,6 +14,7 @@ def inicio():
     # `render_template` busca archivos dentro de la carpeta `templates`.
     return render_template("index.html")
 
+
 @app.route("/dos")
 def dos():
     titulo = "Panel de inicio"
