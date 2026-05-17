@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<a href="/">Inicio</a>
+<a href="/acerca">Acerca</a>
+<a href="/contacto">Contacto</a>
+<a href="/recursos">Recursos</a>
+
+<H1>RECURSOS</H1>
+
+<ul>
+  {% for recurso in recursos %}
+    <li>{{ recurso }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

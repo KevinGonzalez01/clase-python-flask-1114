@@ -11,41 +11,46 @@ app = Flask(__name__)
 # esta funcion y devuelve la pagina `index.html`.
 @app.route("/")
 def inicio():
-    # `render_template` busca archivos dentro de la carpeta `templates`.
-    return render_template("index.html")
-
-
-@app.route("/dos")
-def dos():
     titulo = "Panel de inicio"
-    usuario = "Ana"
+    usuario = "Kevin Gonzalez"
     mensaje = "Bienvenida a Flask"
- 
-    return render_template("dos.html",
+    otro = "Tarea dos completada"
+    edad= "17"
+    # `render_template` busca archivos dentro de la carpeta `templates`.
+    return render_template("index.html",
     titulo=titulo,
     usuario=usuario,
-    mensaje=mensaje
-    )
+    mensaje=mensaje,
+    otro=otro,
+    edad=17)
 
 
-
-@app.route("/tres")
-def tres():
+@app.route("/acerca")
+def acerca():
  
-    return render_template("tres.html")
+    return render_template("acerca.html")
 
 
-@app.route("/cuatro")
-def cuatro():
+
+@app.route("/contacto")
+def contacto():
  
-    return render_template("cuatro.html")
+    return render_template("contacto.html")
 
 
 
-@app.route("/cinco")
-def cinco():
+@app.route("/recursos")
+def recursos():
+    recursos = [
+    "Entorno virtual",
+    "Rutas en Flask",
+    "Plantillas HTML",
+    "Variables con Jinja",
+    "Verificación"
+]
  
-    return render_template("cinco.html")
+    return render_template("recursos.html",
+    recursos=recursos)
 
 
 

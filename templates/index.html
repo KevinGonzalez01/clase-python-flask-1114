@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clase Flask 1114</title>
   </head>
   <body>
+  
+ <a href="/">Inicio</a>
+<a href="/acerca">Acerca</a>
+<a href="/contacto">Contacto</a>
+<a href="/recursos">Recursos</a>
+
+    <H1>TAREA 1</H1>
 
     <h1>El entorno virtual está creado y activado</h1>
 
@@ -16,8 +22,6 @@
     <p>
     1114
     </p>
-
-    <p>Listo para realizar la segunda tarea</p>
 
   <br>
  <p>1. ¿Que problema concreto resuelve el entorno virtual en un proyecto Python?</p>
@@ -41,6 +45,51 @@ Permite que cada proyecto tenga sus propias librerías instaladas sin afectar al
 <br>
 <p>7. ¿Si cambias el HTML y el navegador muestra otra cosa, que te demuestra eso sobre el flujo entre backend y frontend en este proyecto?</p>
 <p>Demuestra que Flask envía el HTML al navegador y que el frontend depende de lo que el backend renderiza.</p>
+
+
+<H1>TAREA 2</H1>
+
+<title>{{ titulo }}</title>
+<h1>{{ mensaje }}</h1>
+<p>{{ otro }}</p>
+<p>{{ edad }}</p>
+<p>Usuario activo: {{ usuario }}</p>
+
+    <P>1. ¿Qué cambia en la plantilla cuando los datos llegan desde app.py en lugar de estar escritos directamente en el HTML?</P>
+    <P>Cuando los datos vienen desde app.py (por ejemplo en una app con Flask) en vez de estar escritos directamente en el HTML, la plantilla pasa de ser estática a dinámica.</P>
+    <P>La plantilla se convierte en una vista dinámica que recibe información desde Python y la renderiza automáticamente.</P>
+<br>
+    <p>2. ¿Qué ventaja tiene separar la lógica en Python de la presentación en la plantilla?</p>
+    <p>El código es más limpio y ordenado.</p>
+    <p>Es más fácil corregir errores.</p>
+    <p>Puedes reutilizar la misma plantilla con distintos datos.</p>
+    <p>Varias personas pueden trabajar al mismo tiempo (unos en Python y otros en diseño HTML).</p>
+    <p>Cambiar el diseño no afecta la lógica del programa.</p>
+<br>
+    <p>3. Si borras una variable de render_template, ¿Qué parte visual deja de funcionar?</p>
+    <p>Si borras una variable de render_template(), deja de funcionar la parte visual del HTML que depende de esa variable, ya que el archivo no recibe el dato enviado desde Python.</p>
+
+<h1>TAREA 3</h1>
+
+<p>1. ¿Que parte define la URL publica: el nombre de la funcion o @app.route(...)?</p>
+<p>La URL pública la define @app.route(...), porque ahí se especifica la ruta que el usuario escribe en el navegador.</p>
+<br>
+<p>2. Si cambias el nombre de la funcion, ¿Qué debe mantenerse para no romper la URL?</p>
+<p>Debe mantenerse igual @app.route(...) para no romper la URL pública, ya que la ruta es la que define la dirección que usan los usuarios en el navegador.</p>
+<br>
+<p>3. ¿Por que separar cada seccion en su propia plantilla mejora el proyecto?</p>
+<p>Porque hace el código más organizado, fácil de leer y mantener.</p>
+
+<h1>Tarea 4</h1>
+
+<p>1. ¿Qué cambia entre renderizar una variable simple y renderizar una lista?</p>
+<p>Una variable simple muestra un solo dato directamente en el HTML, por ejemplo {{ nombre }}, mientras que una lista contiene varios elementos y normalmente necesita un ciclo for para recorrerla y mostrar cada dato.</p>
+<br>
+<p>2. ¿Donde se ejecuta el bucle de Jinja: en el navegador o en Flask?</p>
+<p>El bucle de Jinja se ejecuta en Flask, es decir, en el servidor antes de que la página llegue al navegador. Jinja procesa el HTML, recorre los datos y genera el contenido final ya renderizado; el navegador solo recibe el HTML terminado y lo muestra al usuario.</p>
+<br>
+<p>3. ¿Qué ventaja aporta este patron para casos reales (productos, tareas, alumnos)?</p>
+<p>En lugar de escribir cada elemento manualmente en el HTML, Flask y Jinja pueden recorrer datos desde Python y generar tarjetas, tablas o listas automáticamente, haciendo el proyecto más rápido de actualizar, escalable y fácil de mantener.</p>
 
   </body>
 </html>
