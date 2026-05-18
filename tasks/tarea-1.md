@@ -24,9 +24,12 @@ Para instalar dependencias y ejecutar el proyecto, sigue el `README.md`.
 
 ## Preguntas de reflexion tecnica
 1. ¿Que problema concreto resuelve el entorno virtual en un proyecto Python?
+---
 El entorno virtual (.venv) resuelve el problema de las dependencias y versiones entre proyectos.
 Permite que cada proyecto tenga sus propias librerías instaladas sin afectar al resto del sistema.
+---
 2. ¿Que diferencia hay entre instalar Flask globalmente y hacerlo dentro de .venv?
+
 Instalar Flask globalmente lo deja disponible para toda la máquina. Instalarlo en .venv lo limita solo al proyecto actual.
 3. ¿Por que requirements.txt forma parte del proyecto y no de tu maquina personal?
 Requirements.txt pertenece al proyecto porque guarda las dependencias necesarias para ejecutar ese proyecto en cualquier entorno.
