@@ -2,12 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal {{ profesor }}</title>
+    <title>Informacion - Portal Clase 1114</title>
 </head>
 <body>
-
-      <nav>
+    <!-- MENU -->
+    <nav>
         <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/informacion">Informacion</a></li>
@@ -17,15 +16,16 @@
         </ul>
     </nav>
 
-
-
-    <h1>Bienvenidos al Portal de Clase 1114</h1>
-    
-    <h2>Informacion de la clase</h2>
-    <p><strong>Profesor:</strong> {{ profesor }}</p>
-    <p><strong>Email:</strong> {{ email }}</p>
-    <p><strong>Horario:</strong> {{ horario }}</p>
+    <h1>Informacion de la Clase</h1>
     <p><strong>Aula:</strong> {{ aula }}</p>
-    <p><strong>Descripcion:</strong> {{ descripcion }}</p>
+    <p><strong>Profesor:</strong> {{ profesor }}</p>
+    <p><strong>Horario:</strong> {{ horario }}</p>
+
+    <h2>Objetivos</h2>
+    <ul>
+    {% for objetivos in objetivos %}
+        <li>{{ objetivos }}</li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
